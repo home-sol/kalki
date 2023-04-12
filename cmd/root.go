@@ -22,6 +22,7 @@ var (
 	}
 )
 
+// Execute adds all child commands to the root command and sets flags appropriately.
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {
 		logger.Fatal("We bowled a googly", zap.Error(err))
@@ -36,7 +37,6 @@ func init() {
 }
 
 func onInitialize() {
-
 	if cfgFile != "" {
 		// Use config file from the flag.
 		viper.SetConfigFile(cfgFile)
