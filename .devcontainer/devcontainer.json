@@ -1,0 +1,17 @@
+{
+  "name": "home-sol-kalki",
+  "image": "mcr.microsoft.com/devcontainers/go:1.20-bullseye",
+  "features": {
+    "ghcr.io/guiyomh/features/goreleaser:0": {},
+    "ghcr.io/guiyomh/features/golangci-lint:0": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.makefile-tools",
+        "GitHub.copilot"
+      ]
+    }
+  },
+  "remoteUser": "vscode"
+}
