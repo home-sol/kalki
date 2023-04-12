@@ -65,11 +65,6 @@ diff: ## git diff
 	git diff --exit-code
 	RES=$$(git status --porcelain) ; if [ -n "$$RES" ]; then echo $$RES && exit 1 ; fi
 
-.PHONY: help
-help: # Show help for each of the Makefile recipes.
-	$(call print-target)
-	@grep -E '^[a-zA-Z0-9 -]+:.*#'  Makefile | sort | while read -r l; do printf "\033[1;32m$$(echo $$l | cut -f 1 -d':')\033[00m:$$(echo $$l | cut -f 2- -d'#')\n"; done
-
 define print-target
     @printf "Executing target: \033[36m$@\033[0m\n"
 endef
