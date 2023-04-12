@@ -13,7 +13,9 @@ builds:
       - amd64
       - arm64
       - arm
-
+    ldflags:
+      - '-s -w -X "github.com/home-sol/kalki/cmd.Version={{.Version}}"'
+    mod_timestamp: '{{ .CommitTimestamp }}'
 archives:
   - format_overrides:
       - goos: windows
