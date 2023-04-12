@@ -14,7 +14,10 @@ builds:
       - arm64
       - arm
     ldflags:
-      - '-s -w -X "github.com/home-sol/kalki/cmd.Version={{.Version}}"'
+      - '-s -w'
+      - '-X "github.com/home-sol/kalki/cmd.GitCommit={{.FullCommit}}"'
+      - '-X "github.com/home-sol/kalki/cmd.GitLastTag={{.PreviousTag}}"'
+      - '-X "github.com/home-sol/kalki/cmd.GitExactTag={{.Tag}}"'
     mod_timestamp: '{{ .CommitTimestamp }}'
 archives:
   - format_overrides:
