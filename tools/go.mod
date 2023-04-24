@@ -5,7 +5,7 @@ go 1.20
 require (
 	github.com/client9/misspell v0.3.4
 	github.com/golangci/golangci-lint v1.52.2
-	github.com/goreleaser/goreleaser v1.17.0
+	github.com/goreleaser/goreleaser v1.17.2
 )
 
 require (
